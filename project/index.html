@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<script
+			type="text/javascript"
+			src="https://canvasjs.com/assets/script/canvasjs.min.js"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Stock Price</title>
+	</head>
+	<body>
+		<img
+			src="./assets/img1.jpg"
+			alt="img"
+			style="
+				position: absolute;
+				z-index: -1;
+				width: 45vw;
+				height: 80vh;
+				top: 25vh;
+			"
+		/>
+		<div class="containerStock">
+			<div class="stock-name">NA</div>
+			<div class="row">
+				<div class="col">
+					<span class="icon">High <span>&#128314;</span></span>
+					<span class="high" style="color: rgb(126, 226, 126)">--.--</span>
+				</div>
+				<div class="col">
+					<span>Low <span>&#128315;</span></span>
+					<span class="low" style="color: rgb(212, 86, 113)">--.--</span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<span>Open</span>
+					<span class="open" style="color: rgb(126, 226, 126)">--.--</span>
+				</div>
+				<div class="col">
+					<span>Close</span>
+					<span class="close" style="color: rgb(212, 86, 113)">--.--</span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<img
+				src="./assets/img2.jpg"
+				alt="img"
+				style="width: 15rem; margin: 0 auto; height: 6rem; display: block"
+			/>
+			<button
+				type="button"
+				class="btn btn-success download activeButton"
+				style="
+					position: absolute;
+					z-index: 5;
+					height: 55px;
+					width: 130px;
+					left: 70%;
+				"
+			>
+				download (CSV)
+			</button>
+			<div class="search-input">
+				<a href="" target="_blank" hidden></a>
+				<input type="text" placeholder="Type to search.." />
+				<div class="autocom-box">
+					<!-- here list are inserted from javascript -->
+				</div>
+				<div class="icon"><i class="fas fa-search"></i></div>
+			</div>
+		</div>
+		<div id="chartContainer" style="height: 350px; width: 100%"></div>
+		<script src="index.js"></script>
+	</body>
+</html>
